@@ -1,0 +1,66 @@
+.cForm {
+	max-width: 600px;
+	margin: 0 auto;
+}
+.cFormItem {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-evenly;
+	margin-bottom: 20px;
+}
+.cFormLabel,
+.cFormInput {
+	padding: 10px;
+}
+.cFormLabel {
+	width: 90%;
+}
+.cFormInput {
+	width: 90%;
+	font-size: 16px;
+	border: solid 1px #333;
+	border-radius: 4px;
+}
+.cFormInput:focus-visible {
+	outline: green auto 1px;
+}
+.cFormRequired {
+	color: #fff;
+	background-color: green;
+	border-radius: 4px;
+	padding: 5px 5px;
+	margin: 0 0 0 18px;
+}
+textarea.cFormInput {
+	height: 160px;
+}
+.cFormSubmit {
+	text-align: center;
+}
+.cFormSubmit button {
+	font-size: 18px;
+	font-weight: bold;
+	color: #fff;
+	background-color: green;
+	border: solid 1px green;
+	border-radius: 4px;
+	padding: 5px 32px;
+	transition: 0.4s;
+	cursor: pointer;
+}
+.cFormSubmit button:hover {
+	color: green;
+	background-color: transparent;
+}
+
+@media (min-width: 640px) {
+	.cFormItem {
+		flex-wrap: nowrap;
+	}
+	.cFormLabel {
+		width: 40%;
+	}
+	.cFormInput {
+		width: 55%;
+	}
+}
