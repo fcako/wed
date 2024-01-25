@@ -2,6 +2,7 @@ import * as React from "react"
 
 import Layout from "../components/layout"
 import Seo from "../components/seo"
+import { Link } from "gatsby"
 
 const DevelopperPage = () => (
   <Layout>
@@ -13,11 +14,16 @@ const DevelopperPage = () => (
       <br />
       ちゃんとACM使ってSSL/TLS認証もしてます．
       <br />
-      フロントはReactベースで，勉強も兼ねて使ってみたかったSSGのGatsby.jsを使っています．
+      フロントはReactベースで，勉強も兼ねて使ってみたかったSSGの
+      <Link to="https://www.gatsbyjs.com/">Gatsby.js</Link>
+      を使っています．
       <br />
       本業はバックエンドエンジニアなので色々突っ込みどころがあるのはご容赦ください．
       <br />
-      本題ですが，このサイトのソースコードを個人情報を除いてGitHubで公開しているので，
+      <br />
+      本題ですが，このサイトのソースコードを個人情報を除いて
+      <Link to="https://github.com/fcako/wed">GitHub</Link>
+      で公開しているので，
       <br />
       同業者の友人の方はPull Request作ってくれたら新郎がデプロイします．
       <br />

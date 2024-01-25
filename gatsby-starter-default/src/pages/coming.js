@@ -2,12 +2,11 @@ import * as React from "react"
 
 import Layout from "../components/layout"
 import Seo from "../components/seo"
-import SubPageFooter from "../components/subpage-footer"
+import SubPageFooter from "../components/footer"
 
 const ComingPage = () => (
   <Layout>
-    <h1>Coming Soon</h1>
-    <SubPageFooter />
+    <h1>当日のお楽しみ</h1>
   </Layout>
 )
 
