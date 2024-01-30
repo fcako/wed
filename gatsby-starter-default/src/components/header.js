@@ -5,7 +5,8 @@ const Header = ({ siteTitle }) => (
   <header
     style={{
       margin: `0 auto`,
-      padding: `var(--space-4) var(--size-gutter)`,
+      //   padding: `var(--space-4) var(--size-gutter)`,
+      padding: "20px 0px",
       display: `flex`,
       alignItems: `center`,
       justifyContent: `space-between`,
@@ -18,7 +19,7 @@ const Header = ({ siteTitle }) => (
         textDecoration: `none`,
       }}
     >
-      {siteTitle}
+      Home
     </Link>
     {/* <img
       alt="Gatsby logo"

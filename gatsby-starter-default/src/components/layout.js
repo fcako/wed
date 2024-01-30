@@ -1,5 +1,4 @@
 import * as React from "react"
-import { useStaticQuery, graphql } from "gatsby"
 
 import Header from "./header"
 import "./layout.css"
@@ -8,16 +7,6 @@ import Footer from "./footer"
 import backgroundImage from "../images/white-background.jpg"
 
 const Layout = ({ top, children }) => {
-  const data = useStaticQuery(graphql`
-    query SiteTitleQuery {
-      site {
-        siteMetadata {
-          title
-        }
-      }
-    }
-  `)
-
   return (
     <Div>
       <div
@@ -25,6 +14,7 @@ const Layout = ({ top, children }) => {
           margin: `0 auto`,
           maxWidth: `var(--size-content)`,
           padding: `var(--size-gutter)`,
+          padding: "0px 32px 0px 32px",
         }}
       >
         {top ? <></> : <Header></Header>}

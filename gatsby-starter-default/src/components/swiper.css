@@ -1,0 +1,7 @@
+.swiper-container .swiper-pagination {
+    bottom: 1000px; /* 下からの位置 */
+    left: 0;
+    width: 100%;
+    text-align: center; /* 中央揃えにする場合 */
+    color: yellow;
+  }
