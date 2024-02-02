@@ -42,6 +42,7 @@ body {
   font-weight: normal;
   margin: 0;
   word-wrap: break-word;
+  text-align: center;
 }
 a {
   background-color: transparent;
@@ -230,3 +231,8 @@ pre tt:after {
       Meiryo,
       sans-serif;
   } */
+
+.swiper-button-next,
+.swiper-button-prev {
+    color: #fff !important;
+}

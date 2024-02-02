@@ -10,32 +10,26 @@ const DevelopperPage = () => (
     <p>
       このページは新郎が一から作っています．
       <br />
-      インフラはAWSのS3とCloudFrontを使いました．
+      AWSのS3・CloudFront・ACMを使いました
       <br />
-      ちゃんとACM使ってSSL/TLS認証もしてます．
+      ドメインもRoute53で取得しました
       <br />
-      ドメインはRoute53で取得しました．
-      <br />
-      フロントはReactベースで，勉強も兼ねて使ってみたかったSSGの
+      フロントはReactベースで，勉強も兼ねてSSGの
       <Link to="https://www.gatsbyjs.com/">Gatsby.js</Link>
       を使っています．
       <br />
-      本業はバックエンドエンジニアなので色々突っ込みどころがあるのはご容赦ください．
+      本業はバックエンドエンジニアなので温かい目で見てください
       <br />
       <br />
-      本題ですが，このサイトのソースコードを個人情報を除いて
+      本題ですが，このサイトのソースコードを
       <Link to="https://github.com/fcako/wed">GitHub</Link>
       で公開しているので，
       <br />
-      同業者の友人の方はぜひ
-      <font size="5">自由にページを作ってPull Requestしてください．</font>
+      同業者の友人の方はぜひ 自由にページを作ってPull Requestしてください
       <br />
-      Gatsby.js使ったことなくてもsrc/pages配下を見ればだいたいわかると思います．
+      Gatsby.js使ったことなくてもsrc/pages配下を見ればわかると思います
       <br />
-      内容は我々へのメッセージや，誰とは言いませんが自作の謎解きなどなんでもいいです．
-      <br />
-      <br />
-      注意：AWSの無料枠を使っているのでDos攻撃になるようなことはしないでください．
+      内容は我々へのメッセージや，誰とは言いませんが自作の謎解きなどなんでもいいです
     </p>
   </Layout>
 )

@@ -1,0 +1,25 @@
+/* src/components/Menu.css */
+.menu-container {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .menu-column {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .menu-link {
+    display: block;
+    background-color: rgb(173, 61, 80); 
+    color: white; 
+    text-align: center;
+    padding: 10px;
+    margin: 10px 0;
+    /* margin: 0auto; */
+    text-decoration: none;
+    border-radius: 5px; 
+    width: 10em;
+    /* height:5em; */
+  }
+  
