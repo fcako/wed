@@ -1,4 +1,4 @@
-gatsby-starter-default/src/pages/index.js
+gatsby-starter-default/src/components/const.js
 gatsby-starter-default/src/pages/invitation.js
 gatsby-starter-default/src/pages/detail.js
 gatsby-starter-default/src/pages/profile.js

@@ -11,15 +11,16 @@
   
   .menu-link {
     display: block;
-    background-color: rgb(173, 61, 80); 
+    background-color: rgb(197, 99, 115); 
     color: white; 
     text-align: center;
-    padding: 10px;
+    padding: 20px 0px;
+    /* padding: 0 auto; */
     margin: 10px 0;
-    /* margin: 0auto; */
+    /* margin: 0 auto; */
     text-decoration: none;
     border-radius: 5px; 
-    width: 10em;
-    /* height:5em; */
+    width: 9em;
+    height:5em;
   }
   

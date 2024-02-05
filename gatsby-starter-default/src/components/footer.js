@@ -1,20 +1,8 @@
 import * as React from "react"
 import { Link } from "gatsby"
 import styled from "styled-components"
-
-const moreLinks = [
-  { text: "公式LINE", url: "https://lin.ee/qx48ivn" },
-  {
-    text: "コンラッド東京",
-    url: "https://conrad-tokyo.hiltonjapan.co.jp/",
-  },
-  {
-    text: "GitHub",
-    url: "https://github.com/fcako/wed",
-  },
-]
-
-const utmParameters = `?utm_source=starter&utm_medium=start-page&utm_campaign=default-starter`
+import { StaticImage } from "gatsby-plugin-image"
+import { LINE } from "./const"
 
 const Footer = ({}) => {
   return (
@@ -28,12 +16,24 @@ const Footer = ({}) => {
       <Div>
         <Link to="/">Home</Link>
       </Div>
-      {moreLinks.map((link, i) => (
-        <React.Fragment key={link.url}>
-          <a href={`${link.url}${utmParameters}`}>{link.text}</a>
-          {i !== moreLinks.length - 1 && <> · </>}
-        </React.Fragment>
-      ))}
+      <Link to={LINE}>
+        <StaticImage
+          src="../images/LINE_Brand_icon.png"
+          width={20}
+          placeholder="blurred"
+        ></StaticImage>
+        公式ライン
+      </Link>
+      ・
+      <Link to="https://github.com/fcako/wed">
+        <StaticImage
+          src="../images/github-mark.png"
+          width={20}
+          placeholder="blurred"
+        ></StaticImage>
+        Github
+      </Link>
+      ・<Link to="https://conrad-tokyo.hiltonjapan.co.jp/">コンラッド東京</Link>
       <br />© 2024 &middot; Built by 新郎{" "}
     </footer>
   )
