@@ -9,10 +9,10 @@
  */
 module.exports = {
   siteMetadata: {
-    title: `Home`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
-    siteUrl: `https://gatsbystarterdefaultsource.gatsbyjs.io/`,
+    title: `YujiAndSaoWedding`,
+    description: `Welcome to our wedding page!`,
+    author: `新郎`,
+    siteUrl: `https://yujiandsaowedding.com/`,
   },
   plugins: [
     `gatsby-plugin-styled-components`,

@@ -19,13 +19,17 @@ const IndexPage = () => (
         <br />
         結婚式を挙げることとなりました
         <br /> <br />
-        つきましては日頃の感謝の気持ちを込めて
+        つきましては
+        <br />
+        日頃の感謝の気持ちを込めて
         <br />
         心ばかりのパーティを開催いたします
         <br />
-        ご多用中のこととは思いますが是非ご参加
+        ご多用中のこととは思いますが
         <br />
-        いただきたくご案内申し上げました
+        是非ご参加いただきたく
+        <br />
+        ご案内申し上げました
         <br />
         <br />
         多くの友人と楽しい時間を過ごしたい
@@ -41,8 +45,6 @@ const IndexPage = () => (
         招待状(Invitation)ページより
         <br />
         お願い申し上げます
-        <br />
-        <br />
       </Div>
       <Menu />
     </Layout>
@@ -61,6 +63,8 @@ const ImgDiv = styled.div`
 const Div = styled.div`
   text-align: center;
   margin-top: 1em;
+  padding: 10px;
+  background-color: rgba(255, 230, 230, 0.5);
 `
 
 const Container = styled.div`

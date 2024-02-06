@@ -1,6 +1,7 @@
 import React from "react"
 import { Link } from "gatsby"
 import "./menu.css"
+import styled from "styled-components"
 
 const links = [
   {
@@ -22,21 +23,12 @@ const links = [
 ]
 
 const Menu = () => (
-  <div className="menu-container">
-    <div className="menu-column">
-      {links.slice(0, links.length / 2).map(link => (
-        <Link key={link.url} to={link.url} className="menu-link">
-          {link.text}
-        </Link>
-      ))}
-    </div>
-    <div className="menu-column">
-      {links.slice(links.length / 2).map(link => (
-        <Link key={link.url} to={link.url} className="menu-link">
-          {link.text}
-        </Link>
-      ))}
-    </div>
+  <div className="container">
+    {links.map(link => (
+      <Link className="item" key={link.url} to={link.url}>
+        {link.text}
+      </Link>
+    ))}
   </div>
 )
 
