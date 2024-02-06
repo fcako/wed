@@ -41,8 +41,8 @@ textarea.cFormInput {
 	font-size: 18px;
 	font-weight: bold;
 	color: #fff;
-	background-color: green;
-	border: solid 1px green;
+	background-color: rgb(225, 165, 82);
+	border: solid 1px rgb(225, 165, 82);
 	border-radius: 4px;
 	padding: 5px 32px;
 	transition: 0.4s;

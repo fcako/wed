@@ -46,4 +46,10 @@ const StyledSwiper = styled(Swiper)`
 
 const Img = styled.img`
   margin: 0;
+  background-image: linear-gradient(
+    to bottom,
+    transparent,
+    transparent 70%,
+    white 100%
+  );
 `

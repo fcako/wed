@@ -14,8 +14,7 @@ const IndexPage = () => (
         <ImageSlider />
       </Container>
       <Div>
-        {SHINRO}　{SHIMPU}です
-        <br /> <br /> このたび私たちは
+        このたび私たちは
         <br />
         結婚式を挙げることとなりました
         <br /> <br />
@@ -33,18 +32,25 @@ const IndexPage = () => (
         <br />
         <br />
         多くの友人と楽しい時間を過ごしたい
-        <br /> と思っておりますので
+        <br />
+        と思っておりますので
         <br />
         ぜひご参加くださいますよう
-        <br /> お願い申し上げます
-        <br /> 皆様方にお会いできるのを
+        <br />
+        お願い申し上げます
+        <br />
+        皆様方にお会いできるのを
         <br />
         楽しみにしております
-        <br /> <br /> 出欠のお知らせは以下の
+        <br /> <br />
+        出欠のお知らせは以下の
         <br />
         招待状(Invitation)ページより
         <br />
         お願い申し上げます
+        <br />
+        <br />
+        {SHINRO}　{SHIMPU}
       </Div>
       <Menu />
     </Layout>

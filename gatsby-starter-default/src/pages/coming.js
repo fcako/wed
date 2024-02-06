@@ -9,6 +9,6 @@ const ComingPage = () => (
   </Layout>
 )
 
-export const Head = () => <Seo title="Page two" />
+export const Head = () => <Seo title="Coming" />
 
 export default ComingPage
