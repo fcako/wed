@@ -57,7 +57,7 @@ const IndexPage = () => (
   </div>
 )
 
-export const Head = () => <Seo title="Home" />
+export const Head = () => <Seo title="YujiAndSaoWedding" />
 
 export default IndexPage
 

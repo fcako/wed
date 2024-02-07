@@ -53,6 +53,17 @@ textarea.cFormInput {
 	background-color: transparent;
 }
 
+input::placeholder {
+    font-family: "Times New Roman", "YuMincho", "Hiragino Mincho ProN", "Yu Mincho", "MS PMincho", serif;
+}
+textarea::placeholder {
+    font-family: "Times New Roman", "YuMincho", "Hiragino Mincho ProN", "Yu Mincho", "MS PMincho", serif;
+}
+button {
+    font-family: "Times New Roman", "YuMincho", "Hiragino Mincho ProN", "Yu Mincho", "MS PMincho", serif;
+}
+
+
 @media (min-width: 640px) {
 	.cFormItem {
 		flex-wrap: nowrap;

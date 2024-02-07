@@ -4,10 +4,6 @@
   --color-primary: #7026b9;
   --color-code-bg: #fff4db;
   --color-code: #8a6534;
-  --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial,
-    sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
-  --font-mono: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
-    "Courier New", monospace;
   --font-lg: 18px;
   --font-md: 16px;
   --font-sm: 14px;
@@ -28,18 +24,12 @@
 html {
   -webkit-text-size-adjust: 100%;
   box-sizing: border-box;
-  font: sans-serif;
   font-size: var(--font-md);
   line-height: var(--line-height-normal);
   overflow-y: scroll;
 }
 body {
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased;
   color: var(--color-text);
-  font-family: sans-serif;
-  font-family: var(--font-sans);
-  font-weight: normal;
   margin: 0;
   word-wrap: break-word;
   text-align: center;
@@ -48,7 +38,6 @@ a {
   background-color: transparent;
   color: var(--color-primary);
   text-decoration: none;
-  font-weight: 500;
   text-decoration: underline;
   text-decoration-thickness: 1.5px;
   text-underline-offset: 2px;
@@ -64,13 +53,6 @@ abbr[title] {
   text-decoration: none;
 }
 b,
-strong {
-  font-weight: inherit;
-  font-weight: bolder;
-}
-dfn {
-  font-style: italic;
-}
 h1 {
   margin: 0;
   margin-bottom: 3rem;
@@ -89,7 +71,6 @@ code,
 kbd,
 pre,
 samp {
-  font-family: var(--font-mono);
   font-size: 1em;
   line-height: inherit;
 }
@@ -149,9 +130,6 @@ pre {
 b,
 strong,
 dt,
-th {
-  font-weight: bold;
-}
 li {
   margin-bottom: calc(var(--space-4) / 2);
 }
@@ -202,7 +180,6 @@ code {
   background-color: var(--color-code-bg);
   border-radius: var(--border-radius);
   color: var(--color-code);
-  font-family: var(--font-mono);
   padding-bottom: 0.25em;
   padding-top: 0.25em;
   word-break: normal;
@@ -223,14 +200,6 @@ pre tt:before,
 pre tt:after {
   content: none;
 }
-/* body {
-    font-family: "Helvetica Neue",
-      Arial,
-      "Hiragino Kaku Gothic ProN",
-      "Hiragino Sans",
-      Meiryo,
-      sans-serif;
-  } */
 
 .swiper-button-next,
 .swiper-button-prev {
