@@ -25,18 +25,28 @@ const ProfilePage = () => (
           placeholder="blurred"
         ></StaticImage>
       </Face2>
+      <Empty0></Empty0>
+
       <Question idx={0}>お互いの呼び方は？</Question>
       <Answer1 idx={0}>ぷえちゃん，よちこ，おっちゃん</Answer1>
       <Answer2 idx={0}>ぷえちゃん</Answer2>
+      <Empty idx={0}></Empty>
+
       <Question idx={1}>好きな食べ物は？</Question>
       <Answer1 idx={1}>ナン</Answer1>
       <Answer2 idx={1}>納豆巻き</Answer2>
+      <Empty idx={1}></Empty>
+
       <Question idx={2}>好きなクラシック曲は？</Question>
       <Answer1 idx={2}>ヒンデミットのアルトホルンソナタ</Answer1>
       <Answer2 idx={2}>チャイコフスキーのヴァイオリンコンチェルト</Answer2>
+      <Empty idx={2}></Empty>
+
       <Question idx={3}>二人の思い出の場所は？</Question>
       <Answer1 idx={3}>沖縄</Answer1>
       <Answer2 idx={3}>としまえん</Answer2>
+      <Empty idx={3}></Empty>
+
       <Question idx={4}>お互いの好きなところは？</Question>
       <Answer1 idx={4}>全部顔に出る</Answer1>
       <Answer2 idx={4}>ぷえぷえしてるところ</Answer2>
@@ -51,9 +61,7 @@ const Container = styled.div`
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   align-items: center;
-  background: #f0f8ff;
-  padding: 0;
-  margein: 0;
+  //   place-items: center;
 `
 
 const Name1 = styled.div`
@@ -61,7 +69,7 @@ const Name1 = styled.div`
   grid-column: 1;
   background: #d3d3d3;
   font-size: larger;
-  padding: 5px 0px;
+  font-weight: bold;
 `
 
 const Name2 = styled.div`
@@ -69,28 +77,53 @@ const Name2 = styled.div`
   grid-column: 2;
   background: #d3d3d3;
   font-size: larger;
-  padding: 5px 0px;
+  font-weight: bold;
 `
 const Face1 = styled.div`
   grid-row: 2;
   grid-column: 1;
+  background: #f0f8ff;
 `
 const Face2 = styled.div`
   grid-row: 2;
   grid-column: 2;
+  background: #faebd7;
 `
 
 const Question = styled.div`
-  grid-row: ${props => props.idx * 2 + 3};
+  grid-row: ${props => props.idx * 3 + 4};
   grid-column: 1 / 3;
   background: #d3d3d3;
-  padding: 5px 0px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
 `
 const Answer1 = styled.div`
-  grid-row: ${props => props.idx * 2 + 4};
+  grid-row: ${props => props.idx * 3 + 5};
   grid-column: 1;
+  background: #f0f8ff;
+  border-bottom-left-radius: 10px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 `
 const Answer2 = styled.div`
-  grid-row: ${props => props.idx * 2 + 4};
+  grid-row: ${props => props.idx * 3 + 5};
   grid-column: 2;
+  background: #faebd7;
+  border-bottom-right-radius: 10px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+`
+
+const Empty0 = styled.div`
+  min-height: 10px;
+`
+
+const Empty = styled.div`
+  grid-row: ${props => props.idx * 3 + 6};
+  grid-column: 1 / 3;
+  min-height: 10px;
 `
