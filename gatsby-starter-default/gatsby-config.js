@@ -26,6 +26,7 @@ module.exports = {
       resolve: `gatsby-plugin-s3`,
       options: {
         bucketName: "gatsby-wedding-fukuoka",
+        // bucketName: "gatsby-wedding-fukuoka-sub",
         protocol: "https",
         hostname: "yujiandsaowedding.com",
       },
@@ -54,6 +55,16 @@ module.exports = {
         // theme_color: `#663399`,
         display: `minimal-ui`,
         icon: `src/images/dog2.png`, // This path is relative to the root of the site.
+      },
+    },
+    {
+      resolve: "gatsby-source-google-spreadsheet",
+      options: {
+        spreadsheetId: "1dAXvQ31ZHhDhwwB2Nx1CCD5uLO4fra4jkmesYVn2_CQ",
+        spreadsheetName: "Invitation",
+        credentials: require("./secrets/decent-decker-417213-ea63303b04a4.json"),
+        filterNode: () => true,
+        mapNode: node => node,
       },
     },
   ],

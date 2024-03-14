@@ -16,6 +16,7 @@ const ProfilePage = () => (
           src="../images/yuji-face.png"
           width={80}
           placeholder="blurred"
+          alt="yuji-face"
         ></StaticImage>
       </Face1>
       <Face2>
@@ -23,6 +24,7 @@ const ProfilePage = () => (
           src="../images/sao-face.png"
           width={80}
           placeholder="blurred"
+          alt="sao-face"
         ></StaticImage>
       </Face2>
       <Empty0></Empty0>
@@ -48,8 +50,39 @@ const ProfilePage = () => (
       <Empty idx={3}></Empty>
 
       <Question idx={4}>お互いの好きなところは？</Question>
-      <Answer1 idx={4}>全部顔に出る</Answer1>
+      <Answer1 idx={4}>全部顔に出るところ</Answer1>
       <Answer2 idx={4}>ぷえぷえしてるところ</Answer2>
+      <Empty idx={4}></Empty>
+
+      <Question idx={5}>相手の口癖は？</Question>
+      <Answer1 idx={5}>ぷえ</Answer1>
+      <Answer2 idx={5}>ぷえちゃん</Answer2>
+      <Empty idx={5}></Empty>
+
+      <Question idx={6}>相手の好きな食べ物は？</Question>
+      <Answer1 idx={6}>
+        納豆
+        <br />
+        納豆巻き
+        <br />
+        スコーン
+        <br />
+        ホタテ
+        <br />
+        納豆ご飯
+      </Answer1>
+      <Answer2 idx={6}>
+        鶏肉
+        <br />
+        みかん
+        <br />
+        私が作る炊き込みご飯
+        <br />
+        エビ
+        <br />
+        ナン
+      </Answer2>
+      <Empty idx={6}></Empty>
     </Container>
   </Layout>
 )

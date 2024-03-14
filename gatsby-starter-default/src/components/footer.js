@@ -4,7 +4,7 @@ import styled from "styled-components"
 import { StaticImage } from "gatsby-plugin-image"
 import { LINE } from "./const"
 
-const Footer = ({}) => {
+const Footer = () => {
   return (
     <footer
       style={{
@@ -16,24 +16,25 @@ const Footer = ({}) => {
       <Div>
         <Link to="/">Home</Link>
       </Div>
-      <Link to={LINE}>
+      <a href={LINE}>
         <StaticImage
           src="../images/LINE_Brand_icon.png"
           width={20}
           placeholder="blurred"
+          alt="line"
         ></StaticImage>
         公式ライン
-      </Link>
-      ・
-      <Link to="https://github.com/fcako/wed">
+      </a>
+      <a href="https://github.com/fcako/wed">
         <StaticImage
           src="../images/github-mark.png"
           width={20}
           placeholder="blurred"
+          alt="Github"
         ></StaticImage>
         Github
-      </Link>
-      ・<Link to="https://conrad-tokyo.hiltonjapan.co.jp/">コンラッド東京</Link>
+      </a>
+      <a href="https://conrad-tokyo.hiltonjapan.co.jp/">コンラッド東京</a>
       <br />© 2024 &middot; Built by 新郎{" "}
     </footer>
   )

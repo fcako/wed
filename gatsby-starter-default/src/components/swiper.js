@@ -5,7 +5,8 @@ import "swiper/css"
 import "swiper/css/navigation"
 import "swiper/css/pagination"
 import BaraAndStringImage from "../images/bara-and-string.jpg"
-import CoupleAndStringImage from "../images/couple-and-string.jpg"
+import TwoAndBaraImage from "../images/two-and-bara.jpg"
+import TwoInSTudioImage from "../images/two-in-studio.jpg"
 import "../components/swiper.css"
 import styled from "styled-components"
 
@@ -26,7 +27,10 @@ const ImageSlider = ({ images }) => {
         <Img src={BaraAndStringImage} alt="bara"></Img>
       </SwiperSlide>
       <SwiperSlide>
-        <Img src={CoupleAndStringImage} alt="couple"></Img>
+        <Img src={TwoAndBaraImage} alt="two-and-bara"></Img>
+      </SwiperSlide>
+      <SwiperSlide>
+        <Img src={TwoInSTudioImage} alt="two-in-studio"></Img>
       </SwiperSlide>
     </StyledSwiper>
   )

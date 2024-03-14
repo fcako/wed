@@ -8,7 +8,7 @@ const DevelopperPage = () => (
   <Layout top={false}>
     <h1>新郎から同業者の友人へ</h1>
     <p>
-      このページは新郎が一から作っています．
+      このページは新郎が一から作っています
       <br />
       AWSのS3・CloudFront・ACMを使いました
       <br />
@@ -16,9 +16,14 @@ const DevelopperPage = () => (
       <br />
       フロントはReactベースで，勉強も兼ねてSSGの
       <Link to="https://www.gatsbyjs.com/">Gatsby.js</Link>
-      を使っています．
+      を使っています
       <br />
       本業はバックエンドエンジニアなので温かい目で見てください
+      <br />
+      ついでに，結婚式当日の披露宴終了後にComing
+      Soonになっているプロフィールページを
+      実際のものに自動で切り替えるようにGo言語でLambda関数を作り，
+      CloudFrontで実行するようにしてあります
       <br />
       <br />
       本題ですが，このサイトのソースコードを

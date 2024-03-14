@@ -1,0 +1,5 @@
+{
+  "dependencies": {
+    "gatsby-source-google-spreadsheet": "^2.0.0"
+  }
+}

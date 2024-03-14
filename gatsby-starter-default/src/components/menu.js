@@ -1,7 +1,6 @@
 import React from "react"
 import { Link } from "gatsby"
 import "./menu.css"
-import styled from "styled-components"
 
 const links = [
   {
@@ -14,7 +13,12 @@ const links = [
   },
   {
     text: "Our Profile",
-    url: "/coming",
+    // url: "/coming",
+    url: "/profile",
+  },
+  {
+    text: "Your Message",
+    url: "/message",
   },
   {
     text: "For Developpers",
