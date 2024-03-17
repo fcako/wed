@@ -21,6 +21,10 @@ const links = [
     url: "/message",
   },
   {
+    text: "Count Down",
+    url: "/countdown",
+  },
+  {
     text: "For Developpers",
     url: "/developpers",
   },

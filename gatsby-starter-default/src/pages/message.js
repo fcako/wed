@@ -15,7 +15,7 @@ class DataEntry {
 const MessagePage = () => {
   const [submitted, setSubmitted] = useState(false)
   const [jsonData, setJsonData] = useState(null)
-  const [displayIndex, setDisplayIndex] = useState(0)
+  const [displayIndex, setDisplayIndex] = useState(4)
 
   useEffect(() => {
     const apiKey = process.env.GATSBY_GOOGLE_SHEETS_API_KEY
@@ -38,7 +38,7 @@ const MessagePage = () => {
     const interval = setInterval(() => {
       setDisplayIndex(prevIndex => {
         const numRows = jsonData.length
-        return (prevIndex + 1) % numRows
+        return Math.max((prevIndex + 1) % numRows, 4)
       })
     }, 3000)
 
