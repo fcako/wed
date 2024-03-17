@@ -61,11 +61,6 @@ export const Head = () => <Seo title="YujiAndSaoWedding" />
 
 export default IndexPage
 
-const ImgDiv = styled.div`
-  width: 100%;
-  padding: 0;
-`
-
 const Div = styled.div`
   text-align: center;
   margin-top: 1em;

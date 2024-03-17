@@ -1,5 +1,4 @@
 import * as React from "react"
-
 import Header from "./header"
 import "./layout.css"
 import styled from "styled-components"
@@ -13,7 +12,7 @@ const Layout = ({ top, children }) => {
         style={{
           margin: `0 auto`,
           maxWidth: `var(--size-content)`,
-          padding: `var(--size-gutter)`,
+          //   padding: `var(--size-gutter)`,
           padding: "0px 32px 0px 32px",
         }}
       >

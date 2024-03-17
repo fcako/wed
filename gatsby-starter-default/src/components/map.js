@@ -1,6 +1,6 @@
 import * as React from "react"
 
-const Map = ({}) => {
+const Map = () => {
   return (
     <div>
       <iframe
