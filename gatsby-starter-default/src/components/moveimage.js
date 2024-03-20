@@ -1,9 +1,16 @@
-import React, { useState } from "react"
+import React, { useEffect, useState } from "react"
 import styled from "styled-components"
 import { StaticImage } from "gatsby-plugin-image"
 
 const MoveImage = ({ idx, children }) => {
-  const windowSize = { width: window.innerWidth, height: window.innerHeight }
+  //   const windowSize = { width: window.innerWidth, height: window.innerHeight }
+  const [windowSize, setWindowSize] = useState({ width: 400, height: 800 })
+  useEffect(() => {
+    setWindowSize({
+      width: window.innerWidth,
+      height: window.innerHeight,
+    })
+  }, [])
   const [clickPosition, setClickPosition] = useState({
     x: windowSize.width / 2,
     y: windowSize.height / 2 + 150,
