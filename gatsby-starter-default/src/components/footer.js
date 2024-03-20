@@ -11,6 +11,7 @@ const Footer = () => {
         marginTop: `var(--space-5)`,
         fontSize: `var(--font-sm)`,
         textAlign: "center",
+        bottom: "0",
       }}
     >
       <Div>
@@ -34,7 +35,15 @@ const Footer = () => {
         ></StaticImage>
         Github
       </a>
-      <a href="https://conrad-tokyo.hiltonjapan.co.jp/">コンラッド東京</a>
+      <a href="https://conrad-tokyo.hiltonjapan.co.jp/">
+        <StaticImage
+          src="../images/conrad.png"
+          width={20}
+          placeholder="blurred"
+          alt="Conrad"
+        ></StaticImage>
+        コンラッド東京
+      </a>
       <br />© 2024 &middot; Built by 新郎{" "}
     </footer>
   )

@@ -1,10 +1,12 @@
 import React, { useState, useEffect } from "react"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
+import MoveImage from "../components/moveimage"
+import styled from "styled-components"
 
 const CountDownPage = () => {
   const calculateTimeLeft = () => {
-    const difference = +new Date("2024-08-31T15:30:00") - +new Date()
+    const difference = +new Date("2024-08-31T00:00:00") - +new Date()
     let timeLeft = {}
 
     if (difference > 0) {
@@ -22,7 +24,7 @@ const CountDownPage = () => {
   const [timeLeft, setTimeLeft] = useState(calculateTimeLeft())
 
   useEffect(() => {
-    const timer = setTimeout(() => {
+    const timer = setInterval(() => {
       setTimeLeft(calculateTimeLeft())
     }, 1000)
 
@@ -33,16 +35,24 @@ const CountDownPage = () => {
     <Layout>
       <h1>カウントダウン</h1>
       <div>
-        {Object.keys(timeLeft).length > 0 ? (
-          <div>
-            <p>
-              残り時間: {timeLeft.days}日 {timeLeft.hours}時間{" "}
-              {timeLeft.minutes}分 {timeLeft.seconds}秒
-            </p>
-          </div>
-        ) : (
-          <p>カウントダウン終了！</p>
-        )}
+        <MoveImage idx={timeLeft.seconds % 2}>
+          {Object.keys(timeLeft).length > 0 ? (
+            <div>
+              to　<Span>2024/8/31</Span>
+              <br />
+              <br />
+              <Span>{timeLeft.days}</Span> days
+              <br />
+              <Span>{timeLeft.hours}</Span> hours
+              <br />
+              <Span>{timeLeft.minutes}</Span> minutes
+              <br />
+              <Span>{timeLeft.seconds}</Span> seconds
+            </div>
+          ) : (
+            <p>The Day</p>
+          )}
+        </MoveImage>
       </div>
     </Layout>
   )
@@ -51,3 +61,7 @@ const CountDownPage = () => {
 export const Head = () => <Seo title="Count Down" />
 
 export default CountDownPage
+
+const Span = styled.span`
+  font-size: 2.5em;
+`

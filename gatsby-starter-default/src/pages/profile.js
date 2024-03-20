@@ -94,13 +94,12 @@ const Container = styled.div`
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   align-items: center;
-  //   place-items: center;
 `
 
 const Name1 = styled.div`
   grid-row: 1;
   grid-column: 1;
-  background: #d3d3d3;
+  background: #c0c0c0;
   font-size: larger;
   font-weight: bold;
 `
@@ -108,14 +107,14 @@ const Name1 = styled.div`
 const Name2 = styled.div`
   grid-row: 1;
   grid-column: 2;
-  background: #d3d3d3;
+  background: #c0c0c0;
   font-size: larger;
   font-weight: bold;
 `
 const Face1 = styled.div`
   grid-row: 2;
   grid-column: 1;
-  background: #f0f8ff;
+  background: #e6e6fa;
 `
 const Face2 = styled.div`
   grid-row: 2;
@@ -126,14 +125,14 @@ const Face2 = styled.div`
 const Question = styled.div`
   grid-row: ${props => props.idx * 3 + 4};
   grid-column: 1 / 3;
-  background: #d3d3d3;
+  background: #c0c0c0;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
 `
 const Answer1 = styled.div`
   grid-row: ${props => props.idx * 3 + 5};
   grid-column: 1;
-  background: #f0f8ff;
+  background: #e6e6fa;
   border-bottom-left-radius: 10px;
   height: 100%;
   display: flex;

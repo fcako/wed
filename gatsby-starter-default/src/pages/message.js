@@ -36,10 +36,7 @@ const MessagePage = () => {
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setDisplayIndex(prevIndex => {
-        const numRows = jsonData.length
-        return Math.max((prevIndex + 1) % numRows, 4)
-      })
+      setDisplayIndex(getRandomInt(4, jsonData.length - 1))
     }, 3000)
 
     return () => clearInterval(interval)
@@ -51,23 +48,28 @@ const MessagePage = () => {
       <div>
         二人へのメッセージを募集しています
         <br />
-        皆さんからのメッセージが順番に
+        皆さんからのメッセージが
         <br />
         このページに表示されます
         <br />
         ※何回でもメッセージを送ることができます
         <br />
-        ※間違えて送っちゃった場合は新郎に言ってくれればメッセージ消します
+        ※間違えて送っちゃった場合は
+        <br />
+        新郎に言ってくれれば消します
       </div>
       <div>
         {!jsonData ? (
           <p>Loading...</p>
         ) : (
-          <Div>
-            <div>投稿日: {jsonData[displayIndex].timestamp}</div>
-            <Message>{jsonData[displayIndex].message}</Message>
-            <div>{jsonData[displayIndex].name} さんより</div>
-          </Div>
+          <>
+            <Div>
+              <div>投稿日: {jsonData[displayIndex].timestamp}</div>
+              <Message>{jsonData[displayIndex].message}</Message>
+              <div>{jsonData[displayIndex].name} さんより</div>
+            </Div>
+            <div>現在のメッセージ数: {jsonData.length - 4}</div>
+          </>
         )}
       </div>
       <form
@@ -128,12 +130,18 @@ export const Head = () => <Seo title="Message" />
 
 export default MessagePage
 
+function getRandomInt(min, max) {
+  min = Math.ceil(min)
+  max = Math.floor(max)
+  return Math.floor(Math.random() * (max - min + 1)) + min
+}
+
 const Sup = styled.sup`
   color: red;
 `
 const Div = styled.div`
   border: double 5px #999999;
-  margin: 1em 0em 1em 0em;
+  margin: 1em 0em 0em 0em;
   padding: 1em;
 `
 

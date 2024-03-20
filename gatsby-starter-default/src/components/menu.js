@@ -25,7 +25,7 @@ const links = [
     url: "/countdown",
   },
   {
-    text: "For Developpers",
+    text: "About Site",
     url: "/developpers",
   },
 ]

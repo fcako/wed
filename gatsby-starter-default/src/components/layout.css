@@ -27,12 +27,15 @@ html {
   font-size: var(--font-md);
   line-height: var(--line-height-normal);
   overflow-y: scroll;
+  /* height: 100%; */
 }
 body {
   color: var(--color-text);
   margin: 0;
   word-wrap: break-word;
   text-align: center;
+  /* min-height: 100vh; */
+  /* height: 100%; */
 }
 a {
   background-color: transparent;
