@@ -3,18 +3,33 @@ import styled from "styled-components"
 import { StaticImage } from "gatsby-plugin-image"
 
 const MoveImage = ({ idx, children }) => {
-  //   const windowSize = { width: window.innerWidth, height: window.innerHeight }
-  const [windowSize, setWindowSize] = useState({ width: 400, height: 800 })
+  const [windowSize, setWindowSize] = useState({
+    width: undefined,
+    height: undefined,
+  })
   useEffect(() => {
-    setWindowSize({
-      width: window.innerWidth,
-      height: window.innerHeight,
-    })
+    if (typeof window.visualViewport !== "undefined") {
+      setWindowSize({
+        width: window.visualViewport.width,
+        height: window.visualViewport.height,
+      })
+    } else {
+      setWindowSize({
+        width: window.innerWidth,
+        height: window.innerHeight,
+      })
+    }
   }, [])
   const [clickPosition, setClickPosition] = useState({
-    x: windowSize.width / 2,
-    y: windowSize.height / 2 + 150,
+    x: undefined,
+    y: undefined,
   })
+  useEffect(() => {
+    setClickPosition({
+      x: windowSize.width / 2,
+      y: windowSize.height / 2 + 150,
+    })
+  }, [windowSize])
 
   const handleClick = event => {
     setClickPosition({
@@ -23,55 +38,63 @@ const MoveImage = ({ idx, children }) => {
     })
   }
 
+  useEffect(() => {
+    document.addEventListener("click", handleClick)
+    return () => {
+      document.removeEventListener("click", handleClick)
+    }
+  }, [])
+
   return (
-    <Container onClick={handleClick}>
+    <div $windowsize={windowSize}>
       {children}
-      <Div1 $idx={idx} $clickposition={clickPosition} $windowsize={windowSize}>
-        <StaticImage
-          src="../images/saovn.png"
-          height={100}
-          placeholder="blurred"
-          alt="YujiHorn"
-        ></StaticImage>
-      </Div1>
-      <Div2 $idx={idx} $clickposition={clickPosition} $windowsize={windowSize}>
-        <StaticImage
-          src="../images/yujihr.png"
-          height={100}
-          placeholder="blurred"
-          alt="YujiHorn"
-        ></StaticImage>
-      </Div2>
-    </Container>
+      {clickPosition.x !== undefined && (
+        <>
+          <Div1
+            $idx={idx}
+            $clickposition={clickPosition}
+            $windowsize={windowSize}
+          >
+            <StaticImage
+              src="../images/saovn.png"
+              height={100}
+              placeholder="blurred"
+              alt="YujiHorn"
+            ></StaticImage>
+          </Div1>
+          <Div2
+            $idx={idx}
+            $clickposition={clickPosition}
+            $windowsize={windowSize}
+          >
+            <StaticImage
+              src="../images/yujihr.png"
+              height={100}
+              placeholder="blurred"
+              alt="YujiHorn"
+            ></StaticImage>
+          </Div2>
+        </>
+      )}
+    </div>
   )
 }
 
 export default MoveImage
 
-const Container = styled.div`
-  position: relative;
-  min-height: calc(100vh - 240px);
-`
-
 const Div1 = styled.div`
   position: absolute;
-  transform: translate(
-      ${props => `${
-        props.$clickposition.x - props.$windowsize.width / 2 + 100
-      }px,
-    ${props.$clickposition.y - props.$windowsize.height / 2 - 100}px`}
-    )
+  top: ${props => props.$clickposition.y}px;
+  left: ${props => props.$clickposition.x - 20}px;
+  transform: translate(-50%, -50%)
     ${props => `rotate(${(props.$idx * 2 - 1) * 10}deg)`};
   transition: 2s;
 `
 const Div2 = styled.div`
   position: absolute;
-  transform: translate(
-      ${props => `${
-        props.$clickposition.x - props.$windowsize.width / 2 + 150
-      }px,
-    ${props.$clickposition.y - props.$windowsize.height / 2 - 100}px`}
-    )
+  top: ${props => props.$clickposition.y}px;
+  left: ${props => props.$clickposition.x + 20}px;
+  transform: translate(-50%, -50%)
     ${props => `rotate(${(props.$idx * 2 - 1) * 10}deg)`};
   transition: 0.5s;
 `

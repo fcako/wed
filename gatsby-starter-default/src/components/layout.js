@@ -13,6 +13,8 @@ const Layout = ({ top, children }) => {
           margin: `0 auto`,
           maxWidth: `var(--size-content)`,
           padding: "0px 32px 0px 32px",
+          minHeight: "100vh",
+          position: "relative",
         }}
       >
         {top ? <></> : <Header></Header>}
