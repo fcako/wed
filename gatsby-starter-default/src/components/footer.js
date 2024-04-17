@@ -26,10 +26,11 @@ const Footer = () => {
           transform: "translate(-50%, 0%)",
         }}
       >
-        <Div>
+        <Container>
           <Link to="/">Home</Link>
-        </Div>
-        <a href={LINE}>
+          <Link to="/developpers">About Site</Link>
+        </Container>
+        <A href={LINE}>
           <StaticImage
             src="../images/LINE_Brand_icon.png"
             width={20}
@@ -37,8 +38,8 @@ const Footer = () => {
             alt="line"
           ></StaticImage>
           公式ライン
-        </a>
-        <a href="https://github.com/fcako/wed">
+        </A>
+        <A href="https://github.com/fcako/wed">
           <StaticImage
             src="../images/github-mark.png"
             width={20}
@@ -46,8 +47,8 @@ const Footer = () => {
             alt="Github"
           ></StaticImage>
           Github
-        </a>
-        <a href="https://conrad-tokyo.hiltonjapan.co.jp/">
+        </A>
+        <A href="https://conrad-tokyo.hiltonjapan.co.jp/">
           <StaticImage
             src="../images/conrad.png"
             width={20}
@@ -55,7 +56,7 @@ const Footer = () => {
             alt="Conrad"
           ></StaticImage>
           コンラッド東京
-        </a>
+        </A>
         <br />© 2024 &middot; Built by 新郎{" "}
       </footer>
     </>
@@ -64,6 +65,11 @@ const Footer = () => {
 
 export default Footer
 
-const Div = styled.div`
-  text-align: left;
+const Container = styled.div`
+  display: flex;
+  justify-content: space-between;
+`
+
+const A = styled.a`
+  padding-right: 1em;
 `

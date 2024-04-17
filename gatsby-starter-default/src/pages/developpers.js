@@ -25,7 +25,7 @@ const DevelopperPage = () => (
       このサイトのソースコードを
       <a href="https://github.com/fcako/wed">GitHub</a>
       で公開しているので， 同業者の友人の方はページを作ってPull
-      Requestしてくれてもいいですよ(圧)
+      Requestしてくれてもいいですよ
     </p>
   </Layout>
 )

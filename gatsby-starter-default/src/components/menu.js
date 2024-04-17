@@ -24,10 +24,6 @@ const links = [
     text: "Count Down",
     url: "/countdown",
   },
-  {
-    text: "About Site",
-    url: "/developpers",
-  },
 ]
 
 const Menu = () => (

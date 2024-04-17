@@ -29,38 +29,28 @@ const ProfilePage = () => (
       </Face2>
       <Empty0></Empty0>
 
-      <Question idx={0}>お互いの呼び方は？</Question>
-      <Answer1 idx={0}>ぷえちゃん，よちこ，おっちゃん</Answer1>
-      <Answer2 idx={0}>ぷえちゃん</Answer2>
+      <Question idx={0}>好きな食べ物は？</Question>
+      <Answer1 idx={0}>ナン</Answer1>
+      <Answer2 idx={0}>納豆巻き</Answer2>
       <Empty idx={0}></Empty>
 
-      <Question idx={1}>好きな食べ物は？</Question>
-      <Answer1 idx={1}>ナン</Answer1>
-      <Answer2 idx={1}>納豆巻き</Answer2>
+      <Question idx={1}>好きなクラシック曲は？</Question>
+      <Answer1 idx={1}>ヒンデミットのアルトホルンソナタ</Answer1>
+      <Answer2 idx={1}>チャイコフスキーのヴァイオリンコンチェルト</Answer2>
       <Empty idx={1}></Empty>
 
-      <Question idx={2}>好きなクラシック曲は？</Question>
-      <Answer1 idx={2}>ヒンデミットのアルトホルンソナタ</Answer1>
-      <Answer2 idx={2}>チャイコフスキーのヴァイオリンコンチェルト</Answer2>
+      <Question idx={2}>二人の思い出の場所は？</Question>
+      <Answer1 idx={2}>沖縄</Answer1>
+      <Answer2 idx={2}>としまえん</Answer2>
       <Empty idx={2}></Empty>
 
-      <Question idx={3}>二人の思い出の場所は？</Question>
-      <Answer1 idx={3}>沖縄</Answer1>
-      <Answer2 idx={3}>としまえん</Answer2>
+      <Question idx={3}>お互いの好きなところは？</Question>
+      <Answer1 idx={3}>全部顔に出るところ</Answer1>
+      <Answer2 idx={3}>ぷえぷえしてるところ</Answer2>
       <Empty idx={3}></Empty>
 
-      <Question idx={4}>お互いの好きなところは？</Question>
-      <Answer1 idx={4}>全部顔に出るところ</Answer1>
-      <Answer2 idx={4}>ぷえぷえしてるところ</Answer2>
-      <Empty idx={4}></Empty>
-
-      <Question idx={5}>相手の口癖は？</Question>
-      <Answer1 idx={5}>ぷえ</Answer1>
-      <Answer2 idx={5}>ぷえちゃん</Answer2>
-      <Empty idx={5}></Empty>
-
-      <Question idx={6}>相手の好きな食べ物は？</Question>
-      <Answer1 idx={6}>
+      <Question idx={4}>相手の好きな食べ物は？</Question>
+      <Answer1 idx={4}>
         納豆
         <br />
         納豆巻き
@@ -71,7 +61,7 @@ const ProfilePage = () => (
         <br />
         納豆ご飯
       </Answer1>
-      <Answer2 idx={6}>
+      <Answer2 idx={4}>
         鶏肉
         <br />
         みかん
@@ -82,7 +72,7 @@ const ProfilePage = () => (
         <br />
         ナン
       </Answer2>
-      <Empty idx={6}></Empty>
+      <Empty idx={4}></Empty>
     </Container>
   </Layout>
 )
