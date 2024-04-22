@@ -61,7 +61,7 @@ textarea.cFormInput {
 	padding: 5px 32px;
 	transition: 0.4s;
 	cursor: pointer; */
-    color: #fff;
+    /* color: #fff;
     background-color: #eb6100;
     -webkit-box-shadow: 0 3px 5px rgba(0, 0, 0, 0.3);
     box-shadow: 0 3px 5px rgba(0, 0, 0, 0.3);
@@ -69,13 +69,19 @@ textarea.cFormInput {
     line-height: 100px;
     width: 100px;
     height: 100px;
-    padding: 0;    
+    padding: 0;     */
+    color: transparent;
+    background: none;
+    border: none;
+    margin: none;
+    width: 50%;
 }
 .cFormSubmit button:hover {
 	/* color: green;
 	background-color: transparent; */
-    color: #fff;
-    background: #f56500;
+    /* color: #fff; */
+    /* border-radius: 50%; */
+    /* background: #524841; */
 }
 
 .yes {

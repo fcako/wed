@@ -22,4 +22,5 @@ aws configure
 
 npm run build
 
-npm run deploy
+npm run deploy//失敗するので以下  
+aws s3 cp ./public s3://gatsby-wedding-fukuoka/ --recursive
