@@ -19,8 +19,13 @@ const DevelopperPage = () => (
       スプレッドシートのデータを取得しています
       <br />
       結婚式当日の披露宴終了後にComing Soonになっているプロフィールページを
-      実際のものに自動で切り替えるようにGo言語でLambda関数を作り，
-      CloudFrontで実行するようにしてあります
+      実際のものに自動で切り替えるために，Go言語でLambda関数を作り，
+      EventBridgeで時間を指定して起動し，
+      CloudFrontのオリジンを変更するようにしてあります
+      <br />
+      Lambda関数のデプロイは
+      <a href="https://github.com/fujiwara/lambroll">lambroll</a>
+      というツールを用いています
       <br />
       このサイトのソースコードを
       <a href="https://github.com/fcako/wed">GitHub</a>
