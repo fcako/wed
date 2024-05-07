@@ -3,10 +3,11 @@ import Layout from "../components/layout"
 import Seo from "../components/seo"
 import MoveImage from "../components/moveimage"
 import styled from "styled-components"
+import { StaticImage } from "gatsby-plugin-image"
 
 const CountDownPage = () => {
+  const difference = +new Date("2024-08-31T00:00:00") - +new Date()
   const calculateTimeLeft = () => {
-    const difference = +new Date("2024-08-31T00:00:00") - +new Date()
     let timeLeft = {}
 
     if (difference > 0) {
@@ -34,9 +35,9 @@ const CountDownPage = () => {
   return (
     <Layout>
       <h1>カウントダウン</h1>
-      <div>
-        <MoveImage idx={timeLeft.seconds % 2}>
-          {Object.keys(timeLeft).length > 0 ? (
+      {difference > 0 ? (
+        <div>
+          <MoveImage idx={timeLeft.seconds % 2}>
             <div>
               to　<Span>2024/8/31</Span>
               <br />
@@ -49,11 +50,14 @@ const CountDownPage = () => {
               <br />
               <Span>{timeLeft.seconds}</Span> seconds
             </div>
-          ) : (
-            <p>The Day</p>
-          )}
-        </MoveImage>
-      </div>
+          </MoveImage>
+        </div>
+      ) : (
+        <>
+          <Span>The Day</Span>
+          <StaticImage src="../images/playing.jpg" alt="playing"></StaticImage>
+        </>
+      )}
     </Layout>
   )
 }

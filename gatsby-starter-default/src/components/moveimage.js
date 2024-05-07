@@ -46,15 +46,11 @@ const MoveImage = ({ idx, children }) => {
   }, [])
 
   return (
-    <div $windowsize={windowSize}>
+    <div>
       {children}
       {clickPosition.x !== undefined && (
         <>
-          <Div1
-            $idx={idx}
-            $clickposition={clickPosition}
-            $windowsize={windowSize}
-          >
+          <Div1 $idx={idx} $clickposition={clickPosition}>
             <StaticImage
               src="../images/saovn.png"
               height={100}
@@ -62,11 +58,7 @@ const MoveImage = ({ idx, children }) => {
               alt="YujiHorn"
             ></StaticImage>
           </Div1>
-          <Div2
-            $idx={idx}
-            $clickposition={clickPosition}
-            $windowsize={windowSize}
-          >
+          <Div2 $idx={idx} $clickposition={clickPosition}>
             <StaticImage
               src="../images/yujihr.png"
               height={100}
