@@ -46,7 +46,6 @@ const IndexPage = () => (
         <br /> <br />
         2024年6月吉日
         <br />
-        <br />
         {SHINRO}　{SHIMPU}
       </Div>
       <Menu />
@@ -59,12 +58,14 @@ export const Head = () => <Seo title="YujiAndSaoWedding" />
 export default IndexPage
 
 const Div = styled.div`
+  padding: 20px 10px 20px 10px;
   text-align: center;
   margin-top: 1em;
-  padding: 10px;
   background-color: rgba(255, 230, 230, 0.5);
   word-break: keep-all;
   overflow-wrap: break-word;
+  font-size: 12px;
+  line-height: 2.5em;
 `
 
 const Container = styled.div`

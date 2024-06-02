@@ -49,6 +49,8 @@ const CountDownPage = () => {
               <Span>{timeLeft.minutes}</Span> minutes
               <br />
               <Span>{timeLeft.seconds}</Span> seconds
+              <br />
+              <Div>画面をタップしてみてね</Div>
             </div>
           </MoveImage>
         </div>
@@ -68,4 +70,9 @@ export default CountDownPage
 
 const Span = styled.span`
   font-size: 2.5em;
+`
+
+const Div = styled.div`
+  font-size: 1em;
+  //   text-align: right;
 `

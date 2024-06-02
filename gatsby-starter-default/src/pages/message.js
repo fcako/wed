@@ -44,7 +44,7 @@ const MessagePage = () => {
 
   return (
     <Layout>
-      <h1>メッセージ</h1>
+      <h1>寄せ書き</h1>
       <div>
         二人へのメッセージを募集しています
         <br />

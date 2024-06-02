@@ -4,9 +4,11 @@ import { Navigation, Pagination, Autoplay, Mousewheel, Keyboard } from "swiper"
 import "swiper/css"
 import "swiper/css/navigation"
 import "swiper/css/pagination"
-import BaraAndStringImage from "../images/bara-and-string.jpg"
-import TwoAndBaraImage from "../images/two-and-bara.jpg"
-import TwoInSTudioImage from "../images/two-in-studio.jpg"
+import Image1 from "../images/image1.jpg"
+import Image2 from "../images/image2.jpg"
+import Image3 from "../images/image3.jpg"
+import Image4 from "../images/image4.jpg"
+import Image5 from "../images/image5.jpg"
 import "../components/swiper.css"
 import styled from "styled-components"
 
@@ -24,13 +26,19 @@ const ImageSlider = ({ images }) => {
       autoplay={{ delay: 4000 }}
     >
       <SwiperSlide>
-        <Img src={BaraAndStringImage} alt="bara"></Img>
+        <Img src={Image1} alt="flower"></Img>
       </SwiperSlide>
       <SwiperSlide>
-        <Img src={TwoAndBaraImage} alt="two-and-bara"></Img>
+        <Img src={Image2} alt="maedori-standing"></Img>
       </SwiperSlide>
       <SwiperSlide>
-        <Img src={TwoInSTudioImage} alt="two-in-studio"></Img>
+        <Img src={Image3} alt="two-and-ring"></Img>
+      </SwiperSlide>
+      <SwiperSlide>
+        <Img src={Image4} alt="maedori-sitting"></Img>
+      </SwiperSlide>
+      <SwiperSlide>
+        <Img src={Image5} alt="two-and-gakki"></Img>
       </SwiperSlide>
     </StyledSwiper>
   )
