@@ -34,7 +34,8 @@ const CountDownPage = () => {
 
   return (
     <Layout>
-      <h1>カウントダウン</h1>
+      <h1>Count Down</h1>
+      <Div>画面をタップしてみてね</Div>
       {difference > 0 ? (
         <div>
           <MoveImage idx={timeLeft.seconds % 2}>
@@ -49,16 +50,19 @@ const CountDownPage = () => {
               <Span>{timeLeft.minutes}</Span> minutes
               <br />
               <Span>{timeLeft.seconds}</Span> seconds
-              <br />
-              <Div>画面をタップしてみてね</Div>
             </div>
           </MoveImage>
         </div>
       ) : (
-        <>
-          <Span>The Day</Span>
-          <StaticImage src="../images/playing.jpg" alt="playing"></StaticImage>
-        </>
+        <div>
+          <MoveImage idx={timeLeft.seconds % 2}>
+            <Span>The Day</Span>
+            <StaticImage
+              src="../images/playing.jpg"
+              alt="playing"
+            ></StaticImage>
+          </MoveImage>
+        </div>
       )}
     </Layout>
   )

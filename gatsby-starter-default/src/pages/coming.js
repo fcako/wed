@@ -5,7 +5,8 @@ import Seo from "../components/seo"
 
 const ComingPage = () => (
   <Layout>
-    <h1>当日のお楽しみ</h1>
+    <h1>Coming Soon</h1>
+    <div>披露宴後にオープンします</div>
   </Layout>
 )
 

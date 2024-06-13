@@ -44,7 +44,7 @@ const MessagePage = () => {
 
   return (
     <Layout>
-      <h1>寄せ書き</h1>
+      <h1>Your Message</h1>
       <div>
         二人へのメッセージを募集しています
         <br />
@@ -53,10 +53,6 @@ const MessagePage = () => {
         このページに表示されます
         <br />
         ※何回でもメッセージを送ることができます
-        <br />
-        ※間違えて送っちゃった場合は
-        <br />
-        新郎に言ってくれれば消します
       </div>
       <div>
         {!jsonData ? (

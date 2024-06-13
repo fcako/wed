@@ -7,7 +7,7 @@ import { StaticImage } from "gatsby-plugin-image"
 
 const ProfilePage = () => (
   <Layout>
-    <h1>プロフィール</h1>
+    <h1>Our Profile</h1>
     <Container id="container">
       <Name1>{SHINRO}</Name1>
       <Name2>{SHIMPU}</Name2>

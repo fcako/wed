@@ -43,8 +43,8 @@
 .item{
     padding:20px 0;
     color: #232323;
-    background: rgba(255, 255, 240, 0.5);
-    border-left: solid 10px #f08080;
+    background: rgba(255, 230, 230, 0.5);
+    border-left: solid 10px #ffa07a;
     text-align: center;
     min-height: 80px;
     box-shadow: 0 3px 4px rgba(0, 0, 0, 0.32);/*影*/
