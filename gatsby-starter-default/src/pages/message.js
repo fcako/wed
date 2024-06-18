@@ -3,6 +3,7 @@ import * as styles from "../components/invitation.module.css"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 import styled from "styled-components"
+import submitImage from "../images/submit.png"
 
 class DataEntry {
   constructor(timestamp, message, name = "匿名希望") {
@@ -87,6 +88,7 @@ const MessagePage = () => {
             placeholder="メッセージ"
             type="textarea"
             name="entry.2099992949"
+            required={true}
           />
         </div>
         <div className={styles.cFormItem}>
@@ -102,7 +104,9 @@ const MessagePage = () => {
           />
         </div>
         <div className={styles.cFormSubmit}>
-          <button type="submit">送信する</button>
+          <button type="submit">
+            <ButtonImg src={submitImage} alt="submit"></ButtonImg>
+          </button>
         </div>
         <script type="text/javascript">let submitted = false;</script>
         <iframe
@@ -144,4 +148,17 @@ const Div = styled.div`
 const Message = styled.div`
   margin: 1em 0em 1em 0em;
   font-size: larger;
+`
+
+const Img = styled.img`
+  height: 100px;
+  margin: 0 20px 0 20px;
+`
+
+const ButtonImg = styled(Img)`
+  &:hover {
+    border-radius: 50%;
+    background: #bc8f8f;
+  }
+  margin-top: 40px;
 `

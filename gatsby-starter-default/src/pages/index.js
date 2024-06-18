@@ -40,7 +40,7 @@ const IndexPage = () => (
         <br /> <br />
         出欠のお知らせは以下の
         <br />
-        招待状(Invitation)ページより
+        招待状 (Invitation) ページより
         <br />
         お願い申し上げます
         <br /> <br />
@@ -64,7 +64,7 @@ const Div = styled.div`
   background-color: rgba(255, 230, 230, 0.5);
   word-break: keep-all;
   overflow-wrap: break-word;
-  font-size: 12px;
+  font-size: small;
   line-height: 2.5em;
 `
 
