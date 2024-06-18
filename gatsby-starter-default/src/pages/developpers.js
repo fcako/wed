@@ -10,22 +10,25 @@ const DevelopperPage = () => (
       <br />
       ドメインもこだわってRoute53で取得しました
       <br />
-      フロントはReactベースで，勉強も兼ねてSSGの
+      <br />
+      フロントはReactベースで 勉強も兼ねてSSGの
       <a href="https://www.gatsbyjs.com/">Gatsby.js</a>
       を使っています
       <br />
-      フォームはGoogle Formと紐づけてあって，
+      フォームはGoogle Formと紐づけてあって
       メッセージのページではGCPのAPIを使って
       スプレッドシートのデータを取得しています
       <br />
+      <br />
       結婚式当日の披露宴終了後にComing Soonになっているプロフィールページを
-      実際のものに自動で切り替えるために，Go言語でLambda関数を作り，
-      EventBridgeで時間を指定して起動し，
+      実際のものに自動で切り替えるために Go言語でLambda関数を作り
+      EventBridgeで時間を指定して起動し
       CloudFrontのオリジンを変更するようにしてあります
       <br />
       Lambda関数のデプロイは
       <a href="https://github.com/fujiwara/lambroll">lambroll</a>
       というツールを用いています
+      <br />
       <br />
       このサイトのソースコードを
       <a href="https://github.com/fcako/wed">GitHub</a>
