@@ -72,6 +72,9 @@ textarea::placeholder {
 button {
     font-family: "Times New Roman", "YuMincho", "Hiragino Mincho ProN", "Yu Mincho", "MS PMincho", serif;
 }
+input[type="radio"]{
+    opacity: 0;
+}
 
 
 @media (min-width: 640px) {
