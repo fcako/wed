@@ -24,3 +24,4 @@ npm run build
 
 npm run deploy//失敗するので以下  
 aws s3 cp ./public s3://gatsby-wedding-fukuoka/ --recursive
+aws s3 cp ./public s3://gatsby-wedding-fukuoka-sub/ --recursive
