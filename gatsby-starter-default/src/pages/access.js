@@ -280,7 +280,9 @@ export const AsakusaRoute = () => (
   <Route>
     <ImageString>
       <StaticImage src="../images/asakusa0.png" alt="asakusa0"></StaticImage>
-      <String>汐留方面の改札を出ます</String>
+      <String>
+        <Red>汐留方面</Red>の改札を出ます
+      </String>
     </ImageString>
     <ImageString>
       <StaticImage src="../images/asakusa1.png" alt="asakusa1"></StaticImage>
@@ -341,7 +343,9 @@ export const OedoRoute = () => (
   <Route>
     <ImageString>
       <StaticImage src="../images/oedo0.png" alt="oedo0"></StaticImage>
-      <String>出口7~10方面の改札を出ます</String>
+      <String>
+        <Red>出口7~10方面</Red>の改札を出ます
+      </String>
     </ImageString>
     <ImageString>
       <StaticImage src="../images/oedo1.png" alt="oedo1"></StaticImage>
