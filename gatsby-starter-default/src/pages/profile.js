@@ -8,6 +8,12 @@ import { StaticImage } from "gatsby-plugin-image"
 const ProfilePage = () => (
   <Layout>
     <h1>Our Profile</h1>
+    <div>
+      お互いに相手のプロフィールを
+      <br />
+      勝手に書きました
+      <br /> <br />
+    </div>
     <Container id="container">
       <Name1>{SHINRO}</Name1>
       <Name2>{SHIMPU}</Name2>
@@ -29,50 +35,46 @@ const ProfilePage = () => (
       </Face2>
       <Empty0></Empty0>
 
-      <Question idx={0}>好きな食べ物は？</Question>
-      <Answer1 idx={0}>ナン</Answer1>
-      <Answer2 idx={0}>納豆巻き</Answer2>
+      <Question idx={0}>好きな食べ物ベスト3は？</Question>
+      <Answer1 idx={0}>ナン，みかん，私が作った炊き込みご飯</Answer1>
+      <Answer2 idx={0}>納豆，スコーン，納豆巻き</Answer2>
       <Empty idx={0}></Empty>
 
-      <Question idx={1}>好きなクラシック曲は？</Question>
-      <Answer1 idx={1}>ヒンデミットのアルトホルンソナタ</Answer1>
-      <Answer2 idx={1}>チャイコフスキーのヴァイオリンコンチェルト</Answer2>
+      <Question idx={1}>チャームポイントは？</Question>
+      <Answer1 idx={1}>ふわふわのぽんぽ</Answer1>
+      <Answer2 idx={1}>ふわふわの顎下</Answer2>
       <Empty idx={1}></Empty>
 
-      <Question idx={2}>二人の思い出の場所は？</Question>
-      <Answer1 idx={2}>沖縄</Answer1>
-      <Answer2 idx={2}>としまえん</Answer2>
+      <Question idx={2}>趣味は？</Question>
+      <Answer1 idx={2}>にゃんこ大戦争</Answer1>
+      <Answer2 idx={2}>物件情報を見ること</Answer2>
       <Empty idx={2}></Empty>
 
-      <Question idx={3}>お互いの好きなところは？</Question>
-      <Answer1 idx={3}>全部顔に出るところ</Answer1>
-      <Answer2 idx={3}>ぷえぷえしてるところ</Answer2>
+      <Question idx={3}>嫌いな食べ物は？</Question>
+      <Answer1 idx={3}>玄米</Answer1>
+      <Answer2 idx={3}>辛いもの</Answer2>
       <Empty idx={3}></Empty>
 
-      <Question idx={4}>相手の好きな食べ物は？</Question>
-      <Answer1 idx={4}>
-        納豆
-        <br />
-        納豆巻き
-        <br />
-        スコーン
-        <br />
-        ホタテ
-        <br />
-        納豆ご飯
-      </Answer1>
-      <Answer2 idx={4}>
-        鶏肉
-        <br />
-        みかん
-        <br />
-        私が作る炊き込みご飯
-        <br />
-        エビ
-        <br />
-        ナン
-      </Answer2>
+      <Question idx={4}>特技は？</Question>
+      <Answer1 idx={4}>すぐ寝てすぐ起きること</Answer1>
+      <Answer2 idx={4}>いつまでも寝ること</Answer2>
       <Empty idx={4}></Empty>
+
+      <Question idx={5}>一番盛れてる写真は？</Question>
+      <Answer1 idx={5}>
+        <ImageFrame>
+          <StaticImage
+            src="../images/moreyuji.jpg"
+            alt="sao-face"
+          ></StaticImage>
+        </ImageFrame>
+      </Answer1>
+      <Answer2 idx={5}>
+        <ImageFrame>
+          <StaticImage src="../images/moresao.jpg" alt="sao-face"></StaticImage>
+        </ImageFrame>
+      </Answer2>
+      <Empty idx={5}></Empty>
     </Container>
   </Layout>
 )
@@ -90,7 +92,7 @@ const Name1 = styled.div`
   grid-row: 1;
   grid-column: 1;
   background: #c0c0c0;
-  font-size: larger;
+  font-size: x-large;
   font-weight: bold;
 `
 
@@ -98,7 +100,7 @@ const Name2 = styled.div`
   grid-row: 1;
   grid-column: 2;
   background: #c0c0c0;
-  font-size: larger;
+  font-size: x-large;
   font-weight: bold;
 `
 const Face1 = styled.div`
@@ -118,6 +120,7 @@ const Question = styled.div`
   background: #c0c0c0;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
+  font-weight: bold;
 `
 const Answer1 = styled.div`
   grid-row: ${props => props.idx * 3 + 5};
@@ -128,6 +131,7 @@ const Answer1 = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 10px 0px 10px 0px;
 `
 const Answer2 = styled.div`
   grid-row: ${props => props.idx * 3 + 5};
@@ -138,14 +142,21 @@ const Answer2 = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 10px 0px 10px 0px;
 `
 
 const Empty0 = styled.div`
   min-height: 10px;
+  margin-top: 10px;
 `
 
 const Empty = styled.div`
   grid-row: ${props => props.idx * 3 + 6};
   grid-column: 1 / 3;
   min-height: 10px;
+  margin-top: 10px;
+`
+
+const ImageFrame = styled.div`
+  margin: 10px;
 `
