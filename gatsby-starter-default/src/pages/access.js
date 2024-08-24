@@ -30,7 +30,7 @@ const AccessPage = () => {
       </div>
       <Div>
         <Container>
-          <Title onClick={() => handleClick("JR")}>JR線新橋駅から (8分)</Title>
+          <Title onClick={() => handleClick("JR")}>JR線 新橋駅から (8分)</Title>
           {station === "JR" ? (
             <Mark onClick={() => handleClick("JR")}>－</Mark>
           ) : (
@@ -40,7 +40,7 @@ const AccessPage = () => {
         </Container>
         <Container>
           <Title onClick={() => handleClick("Ginza")}>
-            銀座線新橋駅から (10分)
+            銀座線 新橋駅から (10分)
           </Title>
           {station === "Ginza" ? (
             <Mark onClick={() => handleClick("Ginza")}>－</Mark>
@@ -51,7 +51,7 @@ const AccessPage = () => {
         </Container>
         <Container>
           <Title onClick={() => handleClick("Asakusa")}>
-            都営浅草線新橋駅から (7分)
+            都営浅草線 新橋駅から (7分)
           </Title>
           {station === "Asakusa" ? (
             <Mark onClick={() => handleClick("Asakusa")}>－</Mark>
@@ -62,7 +62,7 @@ const AccessPage = () => {
         </Container>
         <Container>
           <Title onClick={() => handleClick("Oedo")}>
-            都営大江戸線汐留駅から (2分)
+            都営大江戸線 汐留駅から (2分)
           </Title>
           {station === "Oedo" ? (
             <Mark onClick={() => handleClick("Oedo")}>－</Mark>
@@ -73,7 +73,7 @@ const AccessPage = () => {
         </Container>
         <Container>
           <Title onClick={() => handleClick("Yurikamome")}>
-            ゆりかもめ汐留駅から (2分)
+            ゆりかもめ 汐留駅から (2分)
           </Title>
           {station === "Yurikamome" ? (
             <Mark onClick={() => handleClick("Yurikamome")}>－</Mark>
@@ -399,6 +399,8 @@ const Container = styled.div`
   grid-template-columns: repeat(2, 1fr);
   grid-template-columns: 80% 1fr;
   align-items: center;
+  border: solid;
+  border-width: 1px 0px 0px 0px;
 `
 
 const Title = styled.div`
@@ -407,8 +409,6 @@ const Title = styled.div`
   font-size: larger;
   font-weight: bold;
   text-align: left;
-  border: solid;
-  border-width: 1px 0px 0px 0px;
   padding: 0.5em 0 0.5em 0;
 `
 
@@ -417,8 +417,6 @@ const Mark = styled.div`
   grid-column: 2;
   font-size: larger;
   font-weight: bold;
-  border: solid;
-  border-width: 1px 0px 0px 0px;
   padding: 0.5em 0 0.5em 0;
 `
 
