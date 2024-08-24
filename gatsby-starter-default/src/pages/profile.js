@@ -36,8 +36,16 @@ const ProfilePage = () => (
       <Empty0></Empty0>
 
       <Question idx={0}>好きな食べ物ベスト3は？</Question>
-      <Answer1 idx={0}>ナン，みかん，私が作った炊き込みご飯</Answer1>
-      <Answer2 idx={0}>納豆，スコーン，納豆巻き</Answer2>
+      <Answer1 idx={0}>
+        ナン，みかん，
+        <br />
+        私が作った炊き込みご飯
+      </Answer1>
+      <Answer2 idx={0}>
+        納豆，スコーン，
+        <br />
+        僕が作った麻婆豆腐
+      </Answer2>
       <Empty idx={0}></Empty>
 
       <Question idx={1}>チャームポイントは？</Question>
@@ -50,9 +58,13 @@ const ProfilePage = () => (
       <Answer2 idx={2}>物件情報を見ること</Answer2>
       <Empty idx={2}></Empty>
 
-      <Question idx={3}>嫌いな食べ物は？</Question>
-      <Answer1 idx={3}>玄米</Answer1>
-      <Answer2 idx={3}>辛いもの</Answer2>
+      <Question idx={3}>敵は？</Question>
+      <Answer1 idx={3}>
+        メリーゴーランド
+        <br />
+        （酔うから）
+      </Answer1>
+      <Answer2 idx={3}>虫</Answer2>
       <Empty idx={3}></Empty>
 
       <Question idx={4}>特技は？</Question>
@@ -131,7 +143,7 @@ const Answer1 = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 10px 0px 10px 0px;
+  padding: 10px 10px 10px 10px;
 `
 const Answer2 = styled.div`
   grid-row: ${props => props.idx * 3 + 5};
@@ -142,7 +154,7 @@ const Answer2 = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 10px 0px 10px 0px;
+  padding: 10px 10px 10px 10px;
 `
 
 const Empty0 = styled.div`

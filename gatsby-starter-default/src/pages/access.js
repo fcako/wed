@@ -385,7 +385,7 @@ export const OedoRoute = () => (
 export const YurikamomeRoute = () => (
   <Route>
     <ImageString>
-      <String>頑張ってください</String>
+      <String>頑張ってください！</String>
     </ImageString>
   </Route>
 )
@@ -444,7 +444,7 @@ const String = styled.div`
 `
 
 const Red = styled.span`
-  color: red;
+  color: #cd5c5c;
   font-size: larger;
   font-weight: bold;
 `
