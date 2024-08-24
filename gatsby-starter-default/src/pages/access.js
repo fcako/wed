@@ -106,7 +106,7 @@ export const JRRoute = () => (
     </ImageString>
     <ImageString>
       <StaticImage src="../images/jr3.png" alt="jr3"></StaticImage>
-      <String>突き当りを右に曲がります</String>
+      <String>突き当たりを右に曲がります</String>
     </ImageString>
     <ImageString>
       <StaticImage src="../images/jr4.png" alt="jr4"></StaticImage>
