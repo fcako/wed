@@ -23,6 +23,10 @@ const CountDownPage = () => {
   }
 
   const [timeLeft, setTimeLeft] = useState(calculateTimeLeft())
+  const [isChecked, setIsChecked] = useState(false)
+  const handleCheckboxChange = event => {
+    setIsChecked(event.target.checked)
+  }
 
   useEffect(() => {
     const timer = setInterval(() => {
@@ -38,7 +42,7 @@ const CountDownPage = () => {
       <Div>画面をタップしてみてね</Div>
       {difference > 0 ? (
         <div>
-          <MoveImage idx={timeLeft.seconds % 2}>
+          <MoveImage idx={timeLeft.seconds % 2} thread={isChecked}>
             <div>
               to　<Span>2024/8/31</Span>
               <br />
@@ -55,7 +59,7 @@ const CountDownPage = () => {
         </div>
       ) : (
         <div>
-          <MoveImage idx={timeLeft.seconds % 2}>
+          <MoveImage idx={timeLeft.seconds % 2} thread={isChecked}>
             <Span>The Day</Span>
             <StaticImage
               src="../images/playing.jpg"
@@ -64,6 +68,14 @@ const CountDownPage = () => {
           </MoveImage>
         </div>
       )}
+      <label>
+        <input
+          type="checkbox"
+          checked={isChecked}
+          onChange={handleCheckboxChange}
+        />
+        赤い糸
+      </label>
     </Layout>
   )
 }
