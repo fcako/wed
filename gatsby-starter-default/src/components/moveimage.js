@@ -45,15 +45,15 @@ const MoveImage = ({ idx, children, thread }) => {
     }
   }, [])
 
-  const div1Ref = useRef(null)
-  const div2Ref = useRef(null)
+  const start = useRef(null)
+  const end = useRef(null)
 
   return (
     <div>
       {children}
       {clickPosition.x !== undefined && (
         <>
-          <Div1 ref={div1Ref} $idx={idx} $clickposition={clickPosition}>
+          <Div1 ref={start} $idx={idx} $clickposition={clickPosition}>
             <StaticImage
               src="../images/saovn.png"
               height={100}
@@ -61,7 +61,7 @@ const MoveImage = ({ idx, children, thread }) => {
               alt="YujiHorn"
             ></StaticImage>
           </Div1>
-          <Div2 ref={div2Ref} $idx={idx} $clickposition={clickPosition}>
+          <Div2 ref={end} $idx={idx} $clickposition={clickPosition}>
             <StaticImage
               src="../images/yujihr.png"
               height={100}
@@ -69,7 +69,7 @@ const MoveImage = ({ idx, children, thread }) => {
               alt="YujiHorn"
             ></StaticImage>
           </Div2>
-          {thread && <ConnectingLine start={div1Ref} end={div2Ref} />}
+          {thread && <ConnectingLine start={start} end={end} />}
         </>
       )}
     </div>
@@ -111,11 +111,10 @@ function ConnectingLine({ start, end }) {
     }
 
     const intervalId = setInterval(checkTopPosition, 10)
-
     return () => {
       clearInterval(intervalId)
     }
-  }, [topPosition])
+  }, [topPosition, start])
 
   useEffect(() => {
     const startRect = start.current.getBoundingClientRect()
@@ -127,7 +126,7 @@ function ConnectingLine({ start, end }) {
       x2: endRect.left + 30,
       y2: endRect.top + 40,
     })
-  }, [topPosition])
+  }, [topPosition, start, end])
 
   return (
     <svg
