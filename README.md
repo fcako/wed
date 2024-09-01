@@ -2,8 +2,6 @@
 
 [gatsby-starter-default](https://www.gatsbyjs.com/starters/gatsbyjs/gatsby-starter-default)を使用
 
-[本番ページ](https://yujiandsaowedding.com)
-
 # 環境構築
 
 node.js の最新版インストール

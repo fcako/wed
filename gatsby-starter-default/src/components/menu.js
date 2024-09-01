@@ -13,8 +13,8 @@ const links = [
   },
   {
     text: "Our Profile",
-    url: "/coming",
-    // url: "/profile",
+    // url: "/coming",
+    url: "/profile",
   },
   {
     text: "Your Message",
