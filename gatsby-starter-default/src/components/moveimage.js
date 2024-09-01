@@ -1,8 +1,8 @@
-import React, { useEffect, useState } from "react"
+import React, { useEffect, useState, useRef } from "react"
 import styled from "styled-components"
 import { StaticImage } from "gatsby-plugin-image"
 
-const MoveImage = ({ idx, children }) => {
+const MoveImage = ({ idx, children, thread }) => {
   const [windowSize, setWindowSize] = useState({
     width: undefined,
     height: undefined,
@@ -45,12 +45,15 @@ const MoveImage = ({ idx, children }) => {
     }
   }, [])
 
+  const start = useRef(null)
+  const end = useRef(null)
+
   return (
     <div>
       {children}
       {clickPosition.x !== undefined && (
         <>
-          <Div1 $idx={idx} $clickposition={clickPosition}>
+          <Div1 ref={start} $idx={idx} $clickposition={clickPosition}>
             <StaticImage
               src="../images/saovn.png"
               height={100}
@@ -58,7 +61,7 @@ const MoveImage = ({ idx, children }) => {
               alt="YujiHorn"
             ></StaticImage>
           </Div1>
-          <Div2 $idx={idx} $clickposition={clickPosition}>
+          <Div2 ref={end} $idx={idx} $clickposition={clickPosition}>
             <StaticImage
               src="../images/yujihr.png"
               height={100}
@@ -66,6 +69,7 @@ const MoveImage = ({ idx, children }) => {
               alt="YujiHorn"
             ></StaticImage>
           </Div2>
+          {thread && <ConnectingLine start={start} end={end} />}
         </>
       )}
     </div>
@@ -81,6 +85,7 @@ const Div1 = styled.div`
   transform: translate(-50%, -50%)
     ${props => `rotate(${(props.$idx * 2 - 1) * 10}deg)`};
   transition: 2s;
+  z-index: 3;
 `
 const Div2 = styled.div`
   position: absolute;
@@ -89,4 +94,61 @@ const Div2 = styled.div`
   transform: translate(-50%, -50%)
     ${props => `rotate(${(props.$idx * 2 - 1) * 10}deg)`};
   transition: 0.5s;
+  z-index: 3;
 `
+
+function ConnectingLine({ start, end }) {
+  const [position, setPosition] = useState({ x1: 0, y1: 0, x2: 0, y2: 0 })
+  const [topPosition, setTopPosition] = useState("")
+  useEffect(() => {
+    const checkTopPosition = () => {
+      if (start.current) {
+        const newTop = window.getComputedStyle(start.current).top
+        if (newTop !== topPosition) {
+          setTopPosition(newTop)
+        }
+      }
+    }
+
+    const intervalId = setInterval(checkTopPosition, 10)
+    return () => {
+      clearInterval(intervalId)
+    }
+  }, [topPosition, start])
+
+  useEffect(() => {
+    const startRect = start.current.getBoundingClientRect()
+    const endRect = end.current.getBoundingClientRect()
+
+    setPosition({
+      x1: startRect.left + 20,
+      y1: startRect.top + 40,
+      x2: endRect.left + 30,
+      y2: endRect.top + 40,
+    })
+  }, [topPosition, start, end])
+
+  return (
+    <svg
+      style={{
+        position: "fixed",
+        top: 0,
+        left: 0,
+        pointerEvents: "none",
+        zIndex: 1,
+        width: "100%",
+        height: "100%",
+      }}
+    >
+      <path
+        d={`M${position.x1},${position.y1} Q${
+          (position.x1 + position.x2) / 2
+        },${position.y1 + 30} ${position.x2},${position.y2}`}
+        stroke="red"
+        strokeWidth="2"
+        fill="transparent"
+        strokeOpacity="0.4"
+      />
+    </svg>
+  )
+}
