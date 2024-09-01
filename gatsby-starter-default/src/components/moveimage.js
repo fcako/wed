@@ -83,18 +83,18 @@ const Div1 = styled.div`
   top: ${props => props.$clickposition.y}px;
   left: ${props => props.$clickposition.x - 20}px;
   transform: translate(-50%, -50%)
-    ${props => `rotate(${(props.$idx * 2 - 1) * 10}deg)`};
+    rotate(${props => (props.$idx * 2 - 1) * 10}deg);
   transition: 2s;
-  z-index: 3;
+  //   z-index: 3;
 `
 const Div2 = styled.div`
   position: absolute;
   top: ${props => props.$clickposition.y}px;
   left: ${props => props.$clickposition.x + 20}px;
   transform: translate(-50%, -50%)
-    ${props => `rotate(${(props.$idx * 2 - 1) * 10}deg)`};
+    rotate(${props => (props.$idx * 2 - 1) * 10}deg);
   transition: 0.5s;
-  z-index: 3;
+  //   z-index: 3;
 `
 
 function ConnectingLine({ start, end }) {

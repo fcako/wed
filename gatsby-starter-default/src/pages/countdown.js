@@ -6,7 +6,7 @@ import styled from "styled-components"
 import { StaticImage } from "gatsby-plugin-image"
 
 const CountDownPage = () => {
-  const difference = +new Date("2024-08-31T00:00:00") - +new Date()
+  const difference = +new Date() - +new Date("2024-08-31T00:00:00")
   const calculateTimeLeft = () => {
     let timeLeft = {}
 
@@ -39,13 +39,13 @@ const CountDownPage = () => {
 
   return (
     <Layout>
-      <h1>Count Down</h1>
+      <h1>Count Up</h1>
       <Div>画面をタップしてみてね</Div>
       {difference > 0 ? (
         <div>
           <MoveImage idx={timeLeft.seconds % 2} thread={showThread}>
             <div>
-              to　<Span>2024/8/31</Span>
+              from　<Span>2024/8/31</Span>
               <br />
               <br />
               <Span>{timeLeft.days}</Span> days
